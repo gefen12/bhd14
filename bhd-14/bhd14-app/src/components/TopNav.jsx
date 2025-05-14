@@ -3,10 +3,11 @@ import "../styles/TopNav.css"; // Import the CSS file for styling
 function TopNav({ }) {
     return (
       <div className="top-nav">
-       <div>בא"ח</div>
-       <div>גדוד הפיקוד</div>
-       <div>מקצועות</div>
-       <div>מפקדה</div>
+        <div>בא"ח</div>
+        <div>גדוד הפיקוד</div>
+        <div className="bhd14"></div>
+        <div>מקצועות</div>
+        <div>מפקדה</div>
       </div>
     );
   }

@@ -1,14 +1,30 @@
+html, body, #root {
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+}
+
 #root {
-  /* height: 100vh; */
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+
+}
+
+@font-face {
+  font-family: 'rubik';
+  src: url('./assets/fonts/Rubik.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  font-family: 'rubik', sans-serif;
   text-align: center;
 }
 
 .app {
+  display: absolute;
   height: 100vh;
-  scroll-behavior: smooth;
+  scroll-behavior:smooth;
   overflow: hidden;
   width: 100vw;
   direction: rtl;
@@ -53,6 +69,7 @@
   animation: moveAndShrink 2s ease-in-out forwards;
   animation-delay: 1s;
 }
+
 
 @keyframes moveAndShrink {
   0% {

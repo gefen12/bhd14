@@ -1,8 +1,15 @@
 .top-nav {
+    position: absolute;
     display: flex;
     justify-content: space-between;
+    font-size: 2.5rem;
+    gap: 4vw;  
+    top: 4%;
+    left:22vw;
+    width: 90%;
     align-items: center;
-    padding: 10px 20px;
     color: #FF4500;
-    z-index: 3;
+    z-index: 2;
+    left:2%;
 }
+
