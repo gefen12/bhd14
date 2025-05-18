@@ -1,15 +1,55 @@
 .top-nav {
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    font-size: 2.5rem;
-    gap: 4vw;  
-    top: 4%;
-    left:22vw;
-    width: 90%;
-    align-items: center;
-    color: #FF4500;
-    z-index: 2;
-    left:2%;
+position: absolute;
+display: flex;
+justify-content: space-between;
+z-index: 3;
+color: #FF4500;
+font-size: 2.2rem;
+top: 4%;
+width: 75vw;
+left: 12.5%;
 }
 
+.item{
+position: relative;
+cursor: pointer;
+color: #FF4500; /* Default color */
+text-decoration: none; /* Remove underline */
+transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.item:hover {
+color: white; /* Change text color to white on hover */
+}
+
+.item::after {
+content: '';
+position: absolute;
+right: 0; /* Start from the right */
+bottom: -5px; /* Position the line slightly below the text */
+width: 0;
+height: 2px;
+background-color: #FF4500; /* Orange underline */
+transition: width 0.3s ease; /* Smooth animation for the line */
+}
+
+.item:hover::after {
+width: 100%; /* Expand the line to full width on hover */
+right: 0; /* Keep it aligned to the right */
+}
+
+.bhd14logo {
+position: absolute;
+top: 3%;
+left: 2.5vw;
+width: 4rem ;
+z-index: 2;
+}
+
+.peleLogo {
+position: absolute; 
+top: 3%;
+right: 2.5vw;
+width: 5.5rem ;
+z-index: 2;
+}
