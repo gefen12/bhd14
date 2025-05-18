@@ -4,7 +4,10 @@ html, body, #root {
   margin: 0;
   direction: rtl;
 }
-
+.background {
+  background-size: cover;
+  background-position: center;
+}
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -69,6 +72,8 @@ html, body, #root {
   z-index: 2;  
   animation: moveAndShrink 2s ease-in-out forwards;
   animation-delay: 1s;
+  max-width: 50%; /* Adjust size relative to the container */
+
 }
 
 
@@ -81,4 +86,24 @@ html, body, #root {
     top: -10%;
     transform: translate(-50%, 0) scale(0.25);
   }
+}
+
+@font-face {
+  font-family: 'rubik-dirt';
+  src: url('./assets/fonts/RubikDirt.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.sentence {
+  position: absolute;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  font-size: 2.5rem;
+  color: white;
+  font-family: 'rubik-dirt', sans-serif;
+  opacity: 0.5;
+  user-select: none; 
+  pointer-events: none; 
 }

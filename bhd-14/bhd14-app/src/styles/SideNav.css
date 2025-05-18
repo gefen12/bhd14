@@ -17,9 +17,14 @@
     align-items: center; 
     font-size: 0.9rem; 
     cursor: pointer; 
+    transition: transform 0.3s ease; 
   }
   
   .item-side img {
     margin-bottom: 5px; 
   }
+  .item-side:hover {
+    transform: scale(1.1); 
+}
+
   

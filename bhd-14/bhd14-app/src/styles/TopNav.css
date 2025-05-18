@@ -53,3 +53,38 @@ right: 2.5vw;
 width: 5.5rem ;
 z-index: 2;
 }
+@media (max-width: 1150px) {
+    .top-nav {
+      font-size: 2rem; /* Reduce font size for smaller screens */
+      width: 95%; /* Adjust width */
+      left: 2.5%; /* Adjust left padding */
+    }
+  
+    .bhd14logo, .peleLogo {
+      display: none;
+    }
+
+  }
+
+  
+
+  @media (max-width: 480px) {
+    .top-nav {
+      font-size: 1rem; /* Further reduce font size */
+      flex-direction: column; /* Stack items vertically */
+      align-items: center;
+      top: 6%; /* Adjust top position */
+      width: 100%; /* Full width */
+      left: 0; /* Remove left padding */
+    }
+  
+    .item {
+      margin-bottom: 10px; /* Add spacing between items */
+    }
+  
+    .bhd14logo, .peleLogo {
+   
+      width: 3rem; /* Scale logos further */
+      bottom: 2%; /* Adjust top position */
+    }
+  }
