@@ -5,7 +5,7 @@ import BackGround from './assets/background.jpg';
 import bhd14Graphic from './assets/graphicbhd14.svg';
 import SideNav from './components/SideNav.jsx';
 import OpenScreen from "./components/OpenScreen.jsx";
-import BachScreen from "./components/Bach.jsx";
+import BachScreen from "./components/BachScreen.jsx";
 
 function App() {
   const [showContent, setShowContent] = useState(false);

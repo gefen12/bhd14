@@ -1,0 +1,64 @@
+.bach {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 30vh;
+  width: 60vw;
+  color: white;
+  font-family: 'rubik', sans-serif;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 35vh;
+  padding: 0.6rem;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Add subtle shadow */
+}
+
+
+.top-row {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.bottom-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.left-section, .right-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Space between items in each section */
+  flex: 1;
+   width: 30%; 
+}
+.sub-header {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+
+.vertical-divider {
+  width: 2px;
+  height: 100%;
+  background-color: #FF4500; /* Orange vertical divider */
+  margin: 0 15px;
+  align-self: stretch; /* Ensure the divider stretches to match the height of the row */
+}
+
+.item2 {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+}
