@@ -3,14 +3,17 @@ import './App.css';
 import TopNav from './components/TopNav.jsx';
 import BackGround from './assets/background.jpg';
 import bhd14Graphic from './assets/graphicbhd14.svg';
+
 import SideNav from './components/SideNav.jsx';
 import OpenScreen from "./components/OpenScreen.jsx";
 import BachScreen from "./components/BachScreen.jsx";
 import GdodHaScreen from "./components/GdodHaScreen.jsx";
+import MiktzotScreen from "./components/MiktzotScreen.jsx";
+import MifkadaScreen from "./components/MifkadaScreen.jsx";
 
 function App() {
   const [showContent, setShowContent] = useState(false);
-  const [page, setPage] = useState("bach"); // Default page
+  const [page, setPage] = useState("home"); // Default page
   useEffect(() => {
     // Set a timeout to show content after the animation duration (e.g., 2 seconds)
     const timer = setTimeout(() => {
@@ -20,7 +23,7 @@ function App() {
     return () => clearTimeout(timer); // Cleanup the timer
   }, []);
   const handlePageChange = (newPage) => {
-    // setPage(newPage);
+    setPage(newPage);
   };
 
   return (
@@ -32,12 +35,14 @@ function App() {
         {showContent && (
         <>
           <SideNav />
-          {/* <TopNav  onNavigate={handleNavigation}/> */}
-          <TopNav  />
+          <TopNav onNavigate={handlePageChange} />
+    
           <h1 className="sentence">תמיד בחזית, הנדסה צבאית</h1>
           {page === "home" && <OpenScreen />} 
           {page === "bach" && <BachScreen />}
           {page === "gdodha" && <GdodHaScreen />}
+          {page === "miktzot" && <MiktzotScreen />}
+          {page === "mifkada" && <MifkadaScreen />}
         </>
       )}
       

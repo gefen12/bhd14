@@ -1,14 +1,14 @@
-.GdodHa {
+.Miktzot {
   position: absolute;
   z-index: 3;
   display: grid;
   grid-template-columns: repeat(4, 1fr); 
-  grid-template-rows: repeat(2, auto); 
-  gap: 20px; 
+  grid-template-rows: repeat(3, auto); 
+  gap: 20px;
   text-align: center;
   align-items: center;
   justify-items: center; 
-  height: 13vh;
+  height: 22vh;
   width: 50vw;
   color: white;
   font-family: 'rubik', sans-serif;
@@ -18,14 +18,7 @@
   background-color: rgba(0, 0, 0, 0.7); 
   border-radius: 15px;
   padding: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
-}
-
-.top-row, .bottom-row {
-  display: flex;
-  justify-content: space-between;
-  width: 80%;
-  margin-bottom: 10px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .item2 {

@@ -17,6 +17,12 @@ color: #FF4500; /* Default color */
 text-decoration: none; /* Remove underline */
 transition: color 0.3s ease; /* Smooth color transition */
 }
+.bhd14 {
+    cursor: pointer;
+    z-index: 3;
+    width: 9vw; 
+    height: 7vh;
+}
 
 .item:hover {
 color: white; /* Change text color to white on hover */
