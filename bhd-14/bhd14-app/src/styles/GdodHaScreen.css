@@ -1,0 +1,45 @@
+.GdodHa {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9rem; 
+  row-gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  height: 20vh;
+  width: 50vw;
+  color: white;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 40vh;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Add subtle shadow */
+}
+
+
+
+.item2 {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  position: relative;
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.item2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #FF4500; /* Orange underline */
+  transition: width 0.3s ease; /* Smooth animation */
+}
+
+.item2:hover::after {
+  width: 100%; /* Expand underline on hover */
+}

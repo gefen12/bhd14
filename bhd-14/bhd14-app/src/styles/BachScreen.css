@@ -11,7 +11,7 @@
   font-family: 'rubik', sans-serif;
   transform: translate(-50%, -50%);
   left: 50%;
-  top: 35vh;
+  top: 38vh;
   padding: 0.6rem;
   background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
   border-radius: 15px;
@@ -38,13 +38,21 @@
 .left-section, .right-section {
   display: flex;
   flex-direction: column;
-  gap: 10px; /* Space between items in each section */
+  flex-wrap: wrap;
+  gap: 10px; 
   flex: 1;
-   width: 30%; 
+ height: 50%;
+ align-items: start;
+ position: relative;
 }
 .sub-header {
+  position: relative;
+  bottom: 40%;
+  right: 3.7rem;
   font-size: 1.2rem;
   font-weight: bold;
+  text-align: right;
+
   text-decoration: underline;
 }
 
@@ -52,7 +60,7 @@
 .vertical-divider {
   width: 2px;
   height: 100%;
-  background-color: #FF4500; /* Orange vertical divider */
+  background-color: #FF4500; 
   margin: 0 15px;
   align-self: stretch; /* Ensure the divider stretches to match the height of the row */
 }
@@ -61,4 +69,20 @@
   text-align: center;
   font-size: 1rem;
   font-weight: bold;
+  position: relative; 
+  cursor: pointer; 
+}
+.item2::after {
+  content: '';
+  position: absolute;
+  bottom: 0; /* Position the line at the bottom of the text */
+  right: 0;
+  width: 0; /* Start with no width */
+  height: 2px; /* Thickness of the underline */
+  background-color: #FF4500; 
+  transition: width 0.3s ease; /* Smooth animation for the underline */
+}
+
+.item2:hover::after {
+  width: 100%; /* Expand the underline to full width on hover */
 }

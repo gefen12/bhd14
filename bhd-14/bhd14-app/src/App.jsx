@@ -6,10 +6,11 @@ import bhd14Graphic from './assets/graphicbhd14.svg';
 import SideNav from './components/SideNav.jsx';
 import OpenScreen from "./components/OpenScreen.jsx";
 import BachScreen from "./components/BachScreen.jsx";
+import GdodHaScreen from "./components/GdodHaScreen.jsx";
 
 function App() {
   const [showContent, setShowContent] = useState(false);
-  const [page, setPage] = useState("bach");
+  const [page, setPage] = useState("bach"); // Default page
   useEffect(() => {
     // Set a timeout to show content after the animation duration (e.g., 2 seconds)
     const timer = setTimeout(() => {
@@ -36,6 +37,7 @@ function App() {
           <h1 className="sentence">תמיד בחזית, הנדסה צבאית</h1>
           {page === "home" && <OpenScreen />} 
           {page === "bach" && <BachScreen />}
+          {page === "gdodha" && <GdodHaScreen />}
         </>
       )}
       
