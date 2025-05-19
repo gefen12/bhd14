@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, HashRouter } from "react-router-dom";
 import './App.css';
 import TopNav from './components/TopNav.jsx';
 import PeleSite from './components/PeleSite.jsx';
@@ -44,7 +44,7 @@ function App() {
   };
 
   return (
-    <Router>
+    <HashRouter>
       <Routes>
         <Route
           path="/"
@@ -74,7 +74,7 @@ function App() {
         />
         <Route path="/pelesite" element={<PeleSite />} />
       </Routes>
-    </Router>
+      </HashRouter>
   );
 }
 
