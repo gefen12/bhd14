@@ -61,7 +61,7 @@
     position: absolute;
     bottom: -5px; /* Position the line slightly below the text */
     right: 0; /* Align the line to the right */
-    width: 6.6vw; /* Set the width of the line */
+    width: 125px; /* Set the width of the line */
     height: 2px; /* Set the height of the line */
     background-color: #FF4500; /* Orange color */
   }

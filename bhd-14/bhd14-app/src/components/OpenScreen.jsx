@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/OpenScreen.css";
 import searchIcon from "../assets/icons/searchIcon.svg";
-import Quote from "../assets/quote.svg";
+
 
 function OpenScreen({ onStart }) {
     return (
@@ -13,11 +13,11 @@ function OpenScreen({ onStart }) {
       <div className="saying">
         <h3>דבר המפקד</h3>
         <p>
-          <img className="quote" src={Quote}  />
+        <span className="quote">"</span>
           בלה בלה בלה בלה בלה בלה בלה הלחממחמ כן המפקד בלה בלה בלה
           <br />
           לה בלה בלה בלה בלה בלה בלה בלה בלה
-      <img className="quote2" src={Quote}  />
+      <span className="quote">"</span>
         </p>
       </div>
       </div>

@@ -86,3 +86,16 @@
 .item2:hover::after {
   width: 100%; /* Expand the underline to full width on hover */
 }
+
+
+@media (max-width: 1150px) {
+  .bach {
+    font-size: 2rem; 
+    width: 65%; 
+  }
+  .vertical-divider {
+    display: none; 
+  }
+
+ 
+}

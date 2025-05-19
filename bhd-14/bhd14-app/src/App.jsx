@@ -10,6 +10,7 @@ import BachScreen from "./components/BachScreen.jsx";
 import GdodHaScreen from "./components/GdodHaScreen.jsx";
 import MiktzotScreen from "./components/MiktzotScreen.jsx";
 import MifkadaScreen from "./components/MifkadaScreen.jsx";
+import BottomNav from "./components/BottomNav.jsx";
 
 function App() {
   const [showContent, setShowContent] = useState(false);
@@ -35,7 +36,7 @@ function App() {
         {showContent && (
         <>
           <SideNav />
-          <TopNav onNavigate={handlePageChange} />
+          <TopNav onNavigate={handlePageChange} activePage={page} />
     
           <h1 className="sentence">תמיד בחזית, הנדסה צבאית</h1>
           {page === "home" && <OpenScreen />} 
@@ -43,6 +44,8 @@ function App() {
           {page === "gdodha" && <GdodHaScreen />}
           {page === "miktzot" && <MiktzotScreen />}
           {page === "mifkada" && <MifkadaScreen />}
+
+          <BottomNav />
         </>
       )}
       

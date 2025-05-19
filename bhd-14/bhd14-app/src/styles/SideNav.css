@@ -26,5 +26,26 @@
   .item-side:hover {
     transform: scale(1.1); 
 }
+.dropdown {
+    position: absolute;
+    right: 5vw; 
+    background-color: rgba(0, 0, 0, 0.8); 
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    width: 120px; 
+  }
+.dropdown-item {
+    text-align: right;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }  
 
+  .arrow {
+   position: relative; 
+    top: 4px;
+  }
   
