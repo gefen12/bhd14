@@ -30,7 +30,7 @@
 .bottom-row {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: 90%;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -43,7 +43,8 @@
   flex: 1;
  height: 50%;
  align-items: start;
- position: relative;
+ /* position: relative; */
+ text-align: right; 
 }
 .sub-header {
   position: relative;
