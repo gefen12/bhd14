@@ -59,11 +59,11 @@
 .saying h3::after {
     content: '';
     position: absolute;
-    bottom: -5px; /* Position the line slightly below the text */
-    right: 0; /* Align the line to the right */
-    width: 125px; /* Set the width of the line */
-    height: 2px; /* Set the height of the line */
-    background-color: #FF4500; /* Orange color */
+    bottom: -1px; 
+    right: 0; 
+    width: 125px; 
+    height: 1px; 
+    background-color: #FF4500; 
   }
 .saying p {
   margin: 10px 0 0;

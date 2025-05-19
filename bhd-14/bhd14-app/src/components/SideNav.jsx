@@ -30,13 +30,13 @@ function SideNav() {
         {showFilesOptions && (
           <div className="dropdown">
             <div className="dropdown-item">
-            <span className="arrow"><img src={arrow} alt="arrow"/></span> בא"ח 
+            <span><img className="arrow" src={arrow} alt="arrow"/></span> בא"ח 
             </div>
             <div className="dropdown-item">
-            <span className="arrow"><img src={arrow} alt="arrow"/></span> גדוד הפיקוד 
+            <span ><img className="arrow" src={arrow} alt="arrow"/></span> גדוד הפיקוד 
             </div>
             <div className="dropdown-item">
-            <span className="arrow"><img src={arrow} alt="arrow"/></span> מקצועות 
+            <span><img className="arrow" src={arrow} alt="arrow"/></span> מקצועות 
             </div>
           </div>
         )}
@@ -55,16 +55,16 @@ function SideNav() {
         {showInspoOptions && (
           <div className="dropdown">
             <div className="dropdown-item">
-            <span className="arrow"><img src={arrow} alt="arrow"/></span> מצפן 
+            <span ><img className="arrow" src={arrow} alt="arrow"/></span> מצפן 
             </div>
             <div className="dropdown-item">
-            <span className="arrow"><img src={arrow} alt="arrow"/></span> יעוד 
+            <span><img className="arrow" src={arrow} alt="arrow"/></span> יעוד 
             </div>
             <div className="dropdown-item">
-            <span className="arrow"><img src={arrow} alt="arrow"/></span> תכנית עבודה 
+            <span><img className="arrow" src={arrow} alt="arrow"/></span> תכנית עבודה 
             </div>
             <div className="dropdown-item">
-            <span className="arrow"><img src={arrow} alt="arrow"/></span> ערכי ליבה 
+            <span><img className="arrow" src={arrow} alt="arrow"/></span> ערכי ליבה 
             </div>
           </div>
         )}

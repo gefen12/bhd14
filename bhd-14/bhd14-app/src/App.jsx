@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import './App.css';
 import TopNav from './components/TopNav.jsx';
 import BackGround from './assets/background.jpg';
+import BackGround2 from './assets/background2.jpg';
+import BackGround3 from './assets/background3.jpg';
+import BackGround4 from './assets/background4.jpg';
 import bhd14Graphic from './assets/graphicbhd14.svg';
 
 import SideNav from './components/SideNav.jsx';
@@ -14,7 +17,9 @@ import BottomNav from "./components/BottomNav.jsx";
 
 function App() {
   const [showContent, setShowContent] = useState(false);
-  const [page, setPage] = useState("home"); // Default page
+  const [page, setPage] = useState("home"); 
+  const [currentBackground, setCurrentBackground] = useState(0); 
+  const backgrounds = [BackGround, BackGround2, BackGround3, BackGround4];
   useEffect(() => {
     // Set a timeout to show content after the animation duration (e.g., 2 seconds)
     const timer = setTimeout(() => {
@@ -23,6 +28,15 @@ function App() {
 
     return () => clearTimeout(timer); // Cleanup the timer
   }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentBackground((prevIndex) => (prevIndex + 1) % backgrounds.length);
+    }, 10000); 
+
+    return () => clearInterval(interval); // Cleanup the interval
+  }, [backgrounds.length]);
+
   const handlePageChange = (newPage) => {
     setPage(newPage);
   };
@@ -30,7 +44,7 @@ function App() {
   return (
       <div className="App">
         <div className='mask'>  </div>
-        <img src={BackGround} alt="Background" className="background" />
+        <img src={backgrounds[currentBackground]} alt="Background" className="background" />
         <img src={bhd14Graphic} alt="bhd14Graphic" className="bhd14Graphic" />
 
         {showContent && (

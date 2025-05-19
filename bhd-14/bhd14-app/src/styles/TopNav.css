@@ -10,13 +10,14 @@ width: 75vw;
 left: 12.5%;
 }
 
-.item{
-position: relative;
-cursor: pointer;
-color: #FF4500; /* Default orange color */
-text-decoration: none; /* Remove underline */
-transition: color 0.3s ease; /* Smooth color transition */
+.item {
+  position: relative;
+  cursor: pointer;
+  color: #FF4500; 
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
+
 .bhd14 {
     cursor: pointer;
     z-index: 3;
@@ -25,31 +26,30 @@ transition: color 0.3s ease; /* Smooth color transition */
 }
 
 .item.active {
-  color: white; /* Change to white when active */
+  color: white; 
+}
+
+.item:not(.active):hover {
+  transform: scale(1.1); 
+  color: #FF4500; 
 }
 
 .item::after {
-content: '';
-position: absolute;
-right: 0; /* Start from the right */
-bottom: -2px; /* Position the line slightly below the text */
-width: 0;
-height: 2px;
-background-color: #FF4500; /* Orange underline */
-transition: width 0.3s ease; /* Smooth animation for the line */
+  content: '';
+  position: absolute;
+  right: 0; 
+  bottom: 8px; 
+  width: 0;
+  height: 2px;
+  background-color: #FF4500; 
+  transition: width 0.3s ease;
 }
 
 .item.active::after {
-width: 100%; /* Full underline for active item */
+  width: 100%;
 }
-
-.item:hover {
-color: white; /* Change text color to white on hover */
-}
-
-.item:hover::after {
-width: 100%; /* Expand the line to full width on hover */
-right: 0; /* Keep it aligned to the right */
+.item:not(.active):hover::after {
+  width: 0; 
 }
 
 .bhd14logo {
@@ -69,9 +69,9 @@ z-index: 2;
 }
 @media (max-width: 1150px) {
     .top-nav {
-      font-size: 2rem; /* Reduce font size for smaller screens */
-      width: 95%; /* Adjust width */
-      left: 2.5%; /* Adjust left padding */
+      font-size: 2rem; 
+      width: 95%; 
+      left: 2.5%; 
     }
   
     .bhd14logo, .peleLogo {
@@ -84,21 +84,21 @@ z-index: 2;
 
   @media (max-width: 480px) {
     .top-nav {
-      font-size: 1rem; /* Further reduce font size */
-      flex-direction: column; /* Stack items vertically */
+      font-size: 1rem; 
+      flex-direction: column; 
       align-items: center;
-      top: 6%; /* Adjust top position */
-      width: 100%; /* Full width */
-      left: 0; /* Remove left padding */
+      top: 6%; 
+      width: 100%; 
+      left: 0; 
     }
   
     .item {
-      margin-bottom: 10px; /* Add spacing between items */
+      margin-bottom: 10px; 
     }
   
     .bhd14logo, .peleLogo {
    
-      width: 3rem; /* Scale logos further */
-      bottom: 2%; /* Adjust top position */
+      width: 3rem; 
+      bottom: 2%; 
     }
-  }
+}

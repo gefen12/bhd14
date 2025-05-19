@@ -43,7 +43,6 @@
   flex: 1;
  height: 50%;
  align-items: start;
- /* position: relative; */
  text-align: right; 
 }
 .sub-header {
@@ -53,7 +52,6 @@
   font-size: 1.2rem;
   font-weight: bold;
   text-align: right;
-
   text-decoration: underline;
 }
 
