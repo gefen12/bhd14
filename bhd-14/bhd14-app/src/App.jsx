@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from "react";  
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
 import TopNav from './components/TopNav.jsx';
+import PeleSite from './components/PeleSite.jsx';
 import BackGround from './assets/background.jpg';
 import BackGround2 from './assets/background2.jpg';
 import BackGround3 from './assets/background3.jpg';
@@ -17,24 +19,24 @@ import BottomNav from "./components/BottomNav.jsx";
 
 function App() {
   const [showContent, setShowContent] = useState(false);
-  const [page, setPage] = useState("home"); 
-  const [currentBackground, setCurrentBackground] = useState(0); 
+  const [page, setPage] = useState("home");
+  const [currentBackground, setCurrentBackground] = useState(0);
   const backgrounds = [BackGround, BackGround2, BackGround3, BackGround4];
+
   useEffect(() => {
-    // Set a timeout to show content after the animation duration (e.g., 2 seconds)
     const timer = setTimeout(() => {
       setShowContent(true);
-    }, 2500); // Adjust this duration to match your animation time
+    }, 2500);
 
-    return () => clearTimeout(timer); // Cleanup the timer
+    return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentBackground((prevIndex) => (prevIndex + 1) % backgrounds.length);
-    }, 10000); 
+    }, 10000);
 
-    return () => clearInterval(interval); // Cleanup the interval
+    return () => clearInterval(interval);
   }, [backgrounds.length]);
 
   const handlePageChange = (newPage) => {
@@ -42,29 +44,38 @@ function App() {
   };
 
   return (
-      <div className="App">
-        <div className='mask'>  </div>
-        <img src={backgrounds[currentBackground]} alt="Background" className="background" />
-        <img src={bhd14Graphic} alt="bhd14Graphic" className="bhd14Graphic" />
+    <Router>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <div className="App">
+              <div className="mask"></div>
+              <img src={backgrounds[currentBackground]} alt="Background" className="background" />
+              <img src={bhd14Graphic} alt="bhd14Graphic" className="bhd14Graphic" />
 
-        {showContent && (
-        <>
-          <SideNav />
-          <TopNav onNavigate={handlePageChange} activePage={page} />
-    
-          <h1 className="sentence">תמיד בחזית, הנדסה צבאית</h1>
-          {page === "home" && <OpenScreen />} 
-          {page === "bach" && <BachScreen />}
-          {page === "gdodha" && <GdodHaScreen />}
-          {page === "miktzot" && <MiktzotScreen />}
-          {page === "mifkada" && <MifkadaScreen />}
+              {showContent && (
+                <>
+                  <SideNav />
+                  <TopNav onNavigate={handlePageChange} activePage={page} />
 
-          <BottomNav />
-        </>
-      )}
-      
-      </div>
-  )
+                  <h1 className="sentence">תמיד בחזית, הנדסה צבאית</h1>
+                  {page === "home" && <OpenScreen />}
+                  {page === "bach" && <BachScreen />}
+                  {page === "gdodha" && <GdodHaScreen />}
+                  {page === "miktzot" && <MiktzotScreen />}
+                  {page === "mifkada" && <MifkadaScreen />}
+
+                  <BottomNav />
+                </>
+              )}
+            </div>
+          }
+        />
+        <Route path="/pelesite" element={<PeleSite />} />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;

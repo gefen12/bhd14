@@ -9,7 +9,7 @@ function GdodHaScreen() {
         <div className="item2">מבנה הגדוד</div>
         <div className="item2">ישיבות</div>
         <div className="item2">תיקי מדריך</div>
-        <div className="item2">כשיר להכשרה</div>
+        <div className="item2">כשיר להכשיר</div>
         <div className="item2">הכנות סגל</div>
         <div className="item2">סיכום הכשרה</div>
     </div>
