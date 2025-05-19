@@ -46,3 +46,10 @@
     z-index: 2;   
     width: 30vw;
 }
+.pele-bsd{
+    position: absolute;
+    top: 5%;
+    left: 95%;
+    transform: translate(-50%, -50%);
+    z-index: 2;   
+}
