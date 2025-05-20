@@ -7,6 +7,8 @@ import BackGround from './assets/background.jpg';
 import BackGround2 from './assets/background2.jpg';
 import BackGround3 from './assets/background3.jpg';
 import BackGround4 from './assets/background4.jpg';
+import BackGround5 from './assets/background5.jpg';
+import BackGround6 from './assets/background6.jpg';
 import bhd14Graphic from './assets/graphicbhd14.svg';
 
 import SideNav from './components/SideNav.jsx';
@@ -22,7 +24,7 @@ function App() {
   const [page, setPage] = useState("home");
   const [currentBackground, setCurrentBackground] = useState(0);
   const [showAnimation, setShowAnimation] = useState(true);
-  const backgrounds = [BackGround, BackGround2, BackGround3, BackGround4];
+  const backgrounds = [BackGround, BackGround2, BackGround3, BackGround4, BackGround5, BackGround6];
 
   useEffect(() => {
     const timer = setTimeout(() => {
