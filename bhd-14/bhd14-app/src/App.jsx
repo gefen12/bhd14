@@ -21,6 +21,7 @@ function App() {
   const [showContent, setShowContent] = useState(false);
   const [page, setPage] = useState("home");
   const [currentBackground, setCurrentBackground] = useState(0);
+  const [showAnimation, setShowAnimation] = useState(true);
   const backgrounds = [BackGround, BackGround2, BackGround3, BackGround4];
 
   useEffect(() => {
@@ -30,7 +31,17 @@ function App() {
 
     return () => clearTimeout(timer);
   }, []);
+  useEffect(() => {
+    const hasAnimated = sessionStorage.getItem('hasAnimatedBhd14');
 
+    if (!hasAnimated) {
+      setShowAnimation(true);
+      sessionStorage.setItem('hasAnimatedBhd14', 'true');
+      setTimeout(() => {
+        setShowAnimation(false);
+      }, 3000); 
+    }
+  }, []);
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentBackground((prevIndex) => (prevIndex + 1) % backgrounds.length);
@@ -50,9 +61,13 @@ function App() {
           path="/"
           element={
             <div className="App">
-              <div className="mask"></div>
+              <div className="mask"  ></div>
               <img src={backgrounds[currentBackground]} alt="Background" className="background" />
-              <img src={bhd14Graphic} alt="bhd14Graphic" className="bhd14Graphic" />
+        <img
+        src={bhd14Graphic}
+        alt="bhd14Graphic"
+        className={`bhd14Graphic ${showAnimation ? "animate" : ""}`} 
+      />
 
               {showContent && (
                 <>

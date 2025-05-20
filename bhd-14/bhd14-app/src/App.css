@@ -55,6 +55,9 @@ html, body, #root {
   animation: fadeOutOpacity 2s ease-in-out forwards;
   animation-delay: 1s;
 }
+
+
+
 @keyframes fadeOutOpacity {
   0% {
     opacity: 0.9;
@@ -63,19 +66,21 @@ html, body, #root {
     opacity: 0.61;
   }
 }
-
 .bhd14Graphic {
   position: absolute;
-  top: 50%;
+  z-index: 2;
+  max-width: 50%;
+  top: -10%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;  
-  animation: moveAndShrink 2s ease-in-out forwards;
-  animation-delay: 1s;
-  max-width: 50%; /* Adjust size relative to the container */
-
+  transform: translate(-50%, 0) scale(0.25);
 }
 
+.bhd14Graphic.animate {
+  animation: moveAndShrink 2s ease-in-out forwards;
+  animation-delay: 1s;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+}
 
 @keyframes moveAndShrink {
   0% {
