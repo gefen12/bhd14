@@ -5,7 +5,9 @@ function BachScreen() {
   return (
     <div className="bach">
       <div className="top-row">
+        <a href="https://www.figma.com/design/i1m2VFbwliz7hhW7ao1r4t/pele14?node-id=302-8076&m=draw">
         <div className="item2">גרף</div>
+        </a>
         <div className="item2">גאנט</div>
         <div className="item2">מבנה הבא"ח</div>
         <div className="item2">ישיבות</div>
