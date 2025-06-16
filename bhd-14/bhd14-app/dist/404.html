@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>404 Not Found</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #ffd1dc, #ffe3ec);
+      color: #b30059;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 8rem;
+      margin: 0;
+      color: #ff4f9f;
+      animation: float 2s ease-in-out infinite;
+    }
+
+    p {
+      font-size: 1.5rem;
+      margin-top: 1rem;
+      color: #99004d;
+    }
+
+    a {
+      margin-top: 2rem;
+      display: inline-block;
+      color: #ffffff;
+      background-color: #ff69b4;
+      text-decoration: none;
+      border: none;
+      padding: 0.6rem 1.4rem;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    a:hover {
+      background-color: #ff85c1;
+      transform: scale(1.05);
+    }
+
+    .credit {
+      position: absolute;
+      bottom: 10px;
+      font-size: 0.9rem;
+      color: #cc6699;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>404</h1>
+  <p>Well, this is awkward... the page you're looking for doesn't exist.</p>
+  <a href="/">Take Me Home 💖</a>
+  <div class="credit">Website built with love by Gefen Oberstein 🌸</div>
+</body>
+</html>
