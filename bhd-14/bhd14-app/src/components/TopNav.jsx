@@ -9,7 +9,8 @@ function TopNav({ onNavigate, activePage }) {
     const navigate = useNavigate();
 
     const handlePeleClick = () => {
-      navigate("/pelesite"); // Navigate to the PeleSite page
+      // navigate("/pelesite"); 
+      window.open("https://gefen12.github.io/pele/", "_blank");
     };
     
     return (

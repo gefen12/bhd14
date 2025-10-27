@@ -3,6 +3,7 @@ import "../styles/OpenScreen.css";
 import searchIcon from "../assets/icons/searchIcon.svg";
 
 
+
 function OpenScreen({ onStart }) {
     return (
       <div className="welcome-screen">
@@ -20,6 +21,7 @@ function OpenScreen({ onStart }) {
       <span className="quote">"</span>
         </p>
       </div>
+
       </div>
     );
   }

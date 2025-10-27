@@ -83,7 +83,7 @@ function App() {
                   {page === "miktzot" && <MiktzotScreen />}
                   {page === "mifkada" && <MifkadaScreen />}
 
-                  <BottomNav />
+                  <BottomNav activePage={page}/>
                 </>
               )}
             </div>
